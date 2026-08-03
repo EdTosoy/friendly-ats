@@ -1,0 +1,11 @@
+allowBuilds:
+  '@parcel/watcher': true
+  '@swc/core': true
+  esbuild: true
+  less: false
+  lmdb: false
+  msgpackr-extract: true
+  nx: true
+  sharp: true
+  unrs-resolver: true
+  '@nestjs/core': false

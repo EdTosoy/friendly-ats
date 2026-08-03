@@ -18,6 +18,13 @@
     "target": "es2022",
     "customConditions": ["@org/source"],
     "noUncheckedSideEffectImports": false,
-    "types": ["*"]
+    "types": ["*"],
+    "paths": {
+      "@org/shared": ["./libs/shared/src/index.ts"],
+      "@org/types": ["./libs/types/src/index.ts"],
+      "@org/auth": ["./libs/auth/src/index.ts"],
+      "@org/database": ["./libs/database/src/index.ts"],
+      "@org/ui": ["./libs/ui/src/index.ts"]
+    }
   }
 }
