@@ -7,7 +7,15 @@
     "db:migrate": "drizzle-kit migrate --config=libs/database/drizzle.config.ts",
     "db:studio": "drizzle-kit studio --config=libs/database/drizzle.config.ts",
     "docker:up": "docker compose -f infra/docker/docker-compose.yml up -d",
-    "docker:down": "docker compose -f infra/docker/docker-compose.yml down"
+    "docker:down": "docker compose -f infra/docker/docker-compose.yml down",
+    "tracker:dev": "nx run job-tracker-web:dev",
+    "tracker:build": "nx run job-tracker-web:build",
+    "tracker:start": "nx run job-tracker-web:start",
+    "tracker:typecheck": "nx run-many -p job-tracker-web,job-tracker-domain,tracker-quality -t typecheck --output-style=static",
+    "tracker:lint": "nx run-many -p job-tracker-web,job-tracker-domain,tracker-quality -t lint --output-style=static",
+    "tracker:test": "nx run tracker-quality:test --output-style=static",
+    "tracker:e2e": "nx run tracker-quality:e2e --output-style=static",
+    "tracker:format:check": "pnpm --filter @fats/tracker-quality exec prettier --ignore-path ../../.prettierignore --check ../../apps/web ../../libs/domain . ../../docs/job-tracker ../../tsconfig.tracker.json ../../package.json ../../pnpm-workspace.yaml"
   },
   "private": true,
   "devDependencies": {
@@ -101,5 +109,6 @@
     "reflect-metadata": "^0.2.0",
     "rxjs": "~7.8.0",
     "zod": "^4.4.3"
-  }
+  },
+  "packageManager": "pnpm@11.27.0"
 }

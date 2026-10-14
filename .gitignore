@@ -59,3 +59,9 @@ __screenshots__/
 
 
 .env
+
+# Local tracker verification artifacts
+**/test-results/
+**/playwright-report/
+*.tsbuildinfo
+.pnpm-store/
