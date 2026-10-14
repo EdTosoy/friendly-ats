@@ -5,3 +5,9 @@
 /.nx/workspace-data
 .nx/self-healing
 .angular
+
+# Generated tracker artifacts
+**/.next/
+**/next-env.d.ts
+**/test-results/
+**/playwright-report/

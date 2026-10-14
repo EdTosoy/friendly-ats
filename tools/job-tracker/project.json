@@ -1,0 +1,33 @@
+{
+  "name": "tracker-quality",
+  "implicitDependencies": ["job-tracker-web", "job-tracker-domain"],
+  "namedInputs": {
+    "default": [
+      "{projectRoot}/**/*",
+      "{workspaceRoot}/tsconfig.tracker.json",
+      "{workspaceRoot}/pnpm-lock.yaml",
+      "{workspaceRoot}/pnpm-workspace.yaml",
+      "{workspaceRoot}/libs/domain/**/*",
+      "{workspaceRoot}/apps/web/src/**/*"
+    ]
+  },
+  "targets": {
+    "test": {
+      "command": "pnpm --filter @fats/tracker-quality test",
+      "cache": true,
+      "outputs": []
+    },
+    "e2e": {
+      "command": "pnpm --filter @fats/tracker-quality e2e",
+      "cache": false
+    },
+    "typecheck": {
+      "command": "pnpm --filter @fats/tracker-quality typecheck",
+      "cache": true
+    },
+    "lint": {
+      "command": "pnpm --filter @fats/tracker-quality lint",
+      "cache": true
+    }
+  }
+}

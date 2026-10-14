@@ -109,3 +109,7 @@ Join the Nx community:
 - [LinkedIn](https://www.linkedin.com/company/nrwl)
 - [YouTube](https://www.youtube.com/@nxdevtools)
 - [Blog](https://nx.dev/blog)
+
+## Local job tracker
+
+The new `apps/web` tracker runs alongside the existing client, admin, and API projects. See [tracker setup and scope](apps/web/README.md) for commands, browser-local persistence, and limitations.
